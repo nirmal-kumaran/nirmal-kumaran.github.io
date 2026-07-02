@@ -33,10 +33,10 @@
       <span></span><span></span><span></span>
     </button>
     <ul class="nav-links">
-      <li><a href="#experience"><span class="idx">01</span>Experience</a></li>
-      <li><a href="#missions"><span class="idx">02</span>Missions</a></li>
-      <li><a href="#research"><span class="idx">03</span>Research</a></li>
-      <li><a href="#publication"><span class="idx">04</span>Publication</a></li>
+      <li><a href="#publication"><span class="idx">01</span>Publications</a></li>
+      <li><a href="#experience"><span class="idx">02</span>Experience</a></li>
+      <li><a href="#missions"><span class="idx">03</span>Missions</a></li>
+      <li><a href="#research"><span class="idx">04</span>Research</a></li>
       <li><a href="#skills"><span class="idx">05</span>Systems</a></li>
       <li><a href="#contact" class="nav-cta">Contact</a></li>
     </ul>
@@ -64,8 +64,8 @@
     <h1 class="hero-title">NIRMAL<br>KUMARAN</h1>
     <p class="hero-sub">Autonomous systems engineer working across <span>swarm robotics</span>, <span>marine autonomy</span>, and <span>multi-agent reinforcement learning</span> — from GPS-denied drone rescue to communication-constrained AUV search.</p>
     <div class="hero-actions">
-      <a href="#experience" class="btn btn-primary">View Trajectory <span class="btn-arrow">→</span></a>
-      <a href="mailto:me22b171@smail.iitm.ac.in" class="btn btn-ghost">Get in touch</a>
+      <a href="#publication" class="btn btn-primary">View Publications <span class="btn-arrow">→</span></a>
+      <a href="mailto:nirmalkumaran.contact@gmail.com" class="btn btn-ghost">Get in touch</a>
     </div>
   </div>
 
@@ -81,16 +81,16 @@
 <section class="strip" aria-label="Focus areas">
   <div class="strip-inner">
     <div class="strip-item">
+      <span class="strip-num">1</span>
+      <span class="strip-label">Publication<br>IEEE OCEANS 2026</span>
+    </div>
+    <div class="strip-item">
       <span class="strip-num">03</span>
       <span class="strip-label">Int'l Competitions<br>Podium Finishes</span>
     </div>
     <div class="strip-item">
       <span class="strip-num">8.63</span>
       <span class="strip-label">CGPA / 10.00<br>IIT Madras</span>
-    </div>
-    <div class="strip-item">
-      <span class="strip-num">50×</span>
-      <span class="strip-label">Model Compression<br>FUSED-Net (400ms→30ms)</span>
     </div>
     <div class="strip-item">
       <span class="strip-num">3</span>
@@ -113,10 +113,44 @@
   </p>
 </section>
 
-<!-- ============ EXPERIENCE ============ -->
+<!-- ============ PUBLICATION (priority 1) ============ -->
+<section id="publication" class="publication reveal">
+  <div class="section-head">
+    <span class="tag">DWG NO. 01 — PUBLICATION</span>
+    <h2>Published work</h2>
+  </div>
+
+  <article class="pub-card">
+    <div class="pub-visual" aria-hidden="true">
+      <svg viewBox="0 0 200 140" class="pub-svg">
+        <rect x="1" y="1" width="198" height="138" rx="4" class="pub-svg-frame"/>
+        <g class="pub-svg-wave">
+          <path d="M0,70 Q25,40 50,70 T100,70 T150,70 T200,70" />
+          <path d="M0,90 Q25,60 50,90 T100,90 T150,90 T200,90" />
+          <path d="M0,50 Q25,20 50,50 T100,50 T150,50 T200,50" />
+        </g>
+        <circle cx="150" cy="45" r="18" class="pub-svg-ring r1"/>
+        <circle cx="150" cy="45" r="28" class="pub-svg-ring r2"/>
+      </svg>
+    </div>
+    <div class="pub-body">
+      <span class="pub-venue">IEEE OCEANS 2026 · SANYA, CHINA · MAY 25–28</span>
+      <h3>FUSED-Net: Fast Underwater Super-Resolution &amp; Enhancement Distillation Network</h3>
+      <p>A lightweight, real-time super-resolution model distilled from a high-fidelity GAN teacher — built to run enhancement on underwater imagery without the usual inference cost. Presented at the IEEE Oceanic Engineering Society's flagship marine-technology conference.</p>
+      <ul class="pub-points">
+        <li>U-Net image enhancement to remove hue and occlusion, raising UIQM score</li>
+        <li>Super-resolution GAN generating 4× upscaled, high-frequency detail from low-res input</li>
+        <li>Knowledge distillation into a lightweight autoencoder student</li>
+        <li><strong>Result:</strong> inference cut from 400ms to 30ms, model size reduced 50× with reconstruction accuracy maintained</li>
+      </ul>
+    </div>
+  </article>
+</section>
+
+<!-- ============ EXPERIENCE (priority 2) ============ -->
 <section id="experience" class="experience reveal">
   <div class="section-head">
-    <span class="tag">DWG NO. 01 — EXPERIENCE</span>
+    <span class="tag">DWG NO. 02 — EXPERIENCE</span>
     <h2>Trajectory</h2>
   </div>
 
@@ -180,7 +214,7 @@
 <!-- ============ MISSIONS / COMPETITIONS ============ -->
 <section id="missions" class="missions reveal">
   <div class="section-head">
-    <span class="tag">DWG NO. 02 — COMPETITIONS</span>
+    <span class="tag">DWG NO. 03 — COMPETITIONS</span>
     <h2>Mission log</h2>
   </div>
 
@@ -222,7 +256,7 @@
       </div>
       <h3>Formula Bharat 2024</h3>
       <p class="mission-org">FSAE — 2nd-year EV team among 31+ teams</p>
-      <p class="mission-desc">Won the Engineering Design Challenge, Best Battery Pack Design, and the Mathworks Modelling Award.</p>
+      <p class="mission-desc">Won the Engineering Design Challenge, Best Battery Pack Design, and the Mathworks Modelling Award, at India's largest student formula competition.</p>
       <ul class="mission-points">
         <li>2000 N brake pedal load capacity via Ansys ACP iteration</li>
         <li>Carbon-fibre A-arm: 4000 N loads at 25% less weight than steel</li>
@@ -235,7 +269,7 @@
 <!-- ============ RESEARCH PROJECTS ============ -->
 <section id="research" class="research reveal">
   <div class="section-head">
-    <span class="tag">DWG NO. 03 — RESEARCH</span>
+    <span class="tag">DWG NO. 04 — RESEARCH</span>
     <h2>Ongoing lines of work</h2>
   </div>
 
@@ -275,40 +309,6 @@
     </article>
 
   </div>
-</section>
-
-<!-- ============ PUBLICATION ============ -->
-<section id="publication" class="publication reveal">
-  <div class="section-head">
-    <span class="tag">DWG NO. 04 — PUBLICATION</span>
-    <h2>Published work</h2>
-  </div>
-
-  <article class="pub-card">
-    <div class="pub-visual" aria-hidden="true">
-      <svg viewBox="0 0 200 140" class="pub-svg">
-        <rect x="1" y="1" width="198" height="138" rx="4" class="pub-svg-frame"/>
-        <g class="pub-svg-wave">
-          <path d="M0,70 Q25,40 50,70 T100,70 T150,70 T200,70" />
-          <path d="M0,90 Q25,60 50,90 T100,90 T150,90 T200,90" />
-          <path d="M0,50 Q25,20 50,50 T100,50 T150,50 T200,50" />
-        </g>
-        <circle cx="150" cy="45" r="18" class="pub-svg-ring r1"/>
-        <circle cx="150" cy="45" r="28" class="pub-svg-ring r2"/>
-      </svg>
-    </div>
-    <div class="pub-body">
-      <span class="pub-venue">OCEANS SANYA</span>
-      <h3>FUSED-Net: Fast Underwater Super-Resolution &amp; Enhancement Distillation Network</h3>
-      <p>A lightweight, real-time super-resolution model distilled from a high-fidelity GAN teacher — built to run enhancement on underwater imagery without the usual inference cost.</p>
-      <ul class="pub-points">
-        <li>U-Net image enhancement to remove hue and occlusion, raising UIQM score</li>
-        <li>Super-resolution GAN generating 4× upscaled, high-frequency detail from low-res input</li>
-        <li>Knowledge distillation into a lightweight autoencoder student</li>
-        <li><strong>Result:</strong> inference cut from 400ms to 30ms, model size reduced 50× with reconstruction accuracy maintained</li>
-      </ul>
-    </div>
-  </article>
 </section>
 
 <!-- ============ SKILLS ============ -->
@@ -352,16 +352,6 @@
       <span class="edu-what">B.Tech Mechanical Engineering, Indian Institute of Technology Madras</span>
       <span class="edu-score">CGPA 8.63/10.00</span>
     </div>
-    <div class="edu-row">
-      <span class="edu-year">2022</span>
-      <span class="edu-what">Class XII (CBSE), Suguna PIP School</span>
-      <span class="edu-score">95.6%</span>
-    </div>
-    <div class="edu-row">
-      <span class="edu-year">2020</span>
-      <span class="edu-what">Class X (CBSE), The Bharathi Vidhya Bhavan</span>
-      <span class="edu-score">98.2%</span>
-    </div>
   </div>
 </section>
 
@@ -372,11 +362,11 @@
   <div class="footer-inner">
     <div class="footer-main">
       <h2>Let's build something<br>that navigates well.</h2>
-      <a href="mailto:me22b171@smail.iitm.ac.in" class="footer-email">me22b171@smail.iitm.ac.in</a>
+      <a href="mailto:nirmalkumaran.contact@gmail.com" class="footer-email">nirmalkumaran.contact@gmail.com</a>
     </div>
     <div class="footer-links">
-      <a href="https://linkedin.com" target="_blank" rel="noopener">LinkedIn ↗</a>
-      <a href="mailto:me22b171@smail.iitm.ac.in">Email ↗</a>
+      <a href="https://www.linkedin.com/in/nirmal-kumaran-910128274/" target="_blank" rel="noopener">LinkedIn ↗</a>
+      <a href="mailto:nirmalkumaran.contact@gmail.com">Email ↗</a>
     </div>
   </div>
   <div class="footer-bottom">

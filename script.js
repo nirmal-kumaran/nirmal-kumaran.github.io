@@ -62,9 +62,9 @@ const heroEl = document.querySelector('.hero');
 const agentsHud = document.getElementById('hud-agents');
 
 const COLORS = {
-  cyan: 0x4fd8c4,
-  amber: 0xff8952,
-  bg: 0x070b12,
+  cyan: 0xb3142f,   // primary red — agents, links, pulses
+  amber: 0x2a2624,  // near-black secondary — subset of agents
+  bg: 0xfdfcfb,      // paper-white fog to match page background
 };
 
 let width = heroEl.clientWidth;
@@ -164,7 +164,7 @@ const MAX_LINKS = AGENT_COUNT * 6;
 const linkGeo = new THREE.BufferGeometry();
 const linkPositions = new Float32Array(MAX_LINKS * 2 * 3);
 linkGeo.setAttribute('position', new THREE.BufferAttribute(linkPositions, 3));
-const linkMat = new THREE.LineBasicMaterial({ color: COLORS.cyan, transparent: true, opacity: 0.16 });
+const linkMat = new THREE.LineBasicMaterial({ color: COLORS.cyan, transparent: true, opacity: 0.22 });
 const linkLines = new THREE.LineSegments(linkGeo, linkMat);
 scene.add(linkLines);
 
