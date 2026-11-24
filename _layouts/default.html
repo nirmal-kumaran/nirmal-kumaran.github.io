@@ -29,7 +29,6 @@
       <a href="{{ '/experience/' | relative_url }}" {% if page.url == '/experience/' %}aria-current="page"{% endif %}>Experience</a>
       <a href="{{ '/projects/' | relative_url }}" {% if page.url == '/projects/' %}aria-current="page"{% endif %}>Projects</a>
       <a href="{{ '/publications/' | relative_url }}" {% if page.url == '/publications/' %}aria-current="page"{% endif %}>Publications</a>
-      <a href="{{ '/cv.pdf' | relative_url }}">CV</a>
       <button id="theme" type="button" aria-label="Switch light or dark theme"><i class="fa-solid fa-circle-half-stroke" aria-hidden="true"></i></button>
     </nav>
   </div>
@@ -48,7 +47,6 @@
       <li><a href="{{ site.github }}"><i class="fa-brands fa-github" aria-hidden="true"></i>GitHub</a></li>
       {% if site.scholar != "" %}<li><a href="{{ site.scholar }}"><i class="ai ai-google-scholar" aria-hidden="true"></i>Google Scholar</a></li>{% endif %}
       {% if site.orcid != "" %}<li><a href="{{ site.orcid }}"><i class="ai ai-orcid" aria-hidden="true"></i>ORCID</a></li>{% endif %}
-      <li><a href="{{ '/cv.pdf' | relative_url }}"><i class="fa-solid fa-file-lines" aria-hidden="true"></i>CV</a></li>
     </ul>
   </aside>
 
