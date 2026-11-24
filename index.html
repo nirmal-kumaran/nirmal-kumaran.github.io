@@ -1,28 +1,17 @@
 ---
 layout: default
 ---
-<section class="intro">
-  <div class="photo"><img src="{{ '/assets/img/profile.jpg' | relative_url }}" alt="Nirmal Kumaran" onerror="this.remove()">NK</div>
-  <div>
-    <h1>Nirmal Kumaran</h1>
-    <p class="role">Computer Vision Engineer, LAT Aerospace · B.Tech Mechanical Engineering, IIT Madras</p>
-    <p class="bio">I work on how robots perceive and act. My interests are robot learning, reinforcement learning, Vision-Language-Action models and world models, and making these systems run in real time on real hardware.</p>
-    <p class="bio">At LAT Aerospace I build detection, tracking and video stabilization for UAV gimbal cameras on embedded GPUs. Before this, I worked on multi-agent reinforcement learning for underwater vehicles at Sorbonne University Abu Dhabi, and on Vision-Language-Action models for robot manipulation at Mowito Automations.</p>
-    <div class="links">
-      <a href="mailto:{{ site.email }}">Email</a>
-      <a href="{{ '/cv.pdf' | relative_url }}">CV</a>
-      <a href="{{ site.linkedin }}">LinkedIn</a>
-      <a href="{{ site.github }}">GitHub</a>
-      {% if site.orcid != "" %}<a href="{{ site.orcid }}">ORCID</a>{% endif %}
-      {% if site.scholar != "" %}<a href="{{ site.scholar }}">Google Scholar</a>{% endif %}
-      {% if site.x != "" %}<a href="{{ site.x }}">X</a>{% endif %}
-    </div>
-  </div>
+<section class="lede">
+  <h1>About</h1>
+  <p style="margin-top:14px">I'm a robotics and computer vision engineer. I work on how robots perceive and act: robot learning, reinforcement learning, Vision-Language-Action models and world models, and making these systems run in real time on real hardware.</p>
+  <p>At LAT Aerospace I build detection, tracking and video stabilization for UAV gimbal cameras on embedded GPUs. Before this, I worked on multi-agent reinforcement learning for underwater vehicles with Dr. Giulia De Masi at Sorbonne University Abu Dhabi, and on Vision-Language-Action models for robot manipulation at Mowito Automations. I graduated in Mechanical Engineering from IIT Madras in 2026.</p>
+  <p>Feel free to read my <a href="{{ '/cv.pdf' | relative_url }}">CV</a> or <a href="mailto:{{ site.email }}">get in touch</a>.</p>
 </section>
 
 <section>
   <h2>Research interests</h2>
   <div class="tags">
+    <span class="tag">Physical AI</span>
     <span class="tag">Robot learning</span>
     <span class="tag">Vision-Language-Action models</span>
     <span class="tag">World models</span>
@@ -35,7 +24,6 @@ layout: default
 <section>
   <h2>News</h2>
   <ul class="plain news">
-    <li><span class="date">2026</span><span>Preparing a journal paper on multi-agent search with underwater vehicles, with Dr. Giulia De Masi.</span></li>
     <li><span class="date">Aug 2026</span><span>Joined LAT Aerospace as a Computer Vision Engineer.</span></li>
     <li><span class="date">Jun 2026</span><span>Started a research internship at the MEERA Lab, Sorbonne University Abu Dhabi.</span></li>
     <li><span class="date">May 2026</span><span>Presented FUSED-Net at IEEE OCEANS 2026, Sanya. <a href="{{ '/publications/' | relative_url }}">Paper</a></span></li>
@@ -58,7 +46,7 @@ layout: default
     <div class="org">MEERA Lab, Sorbonne University Abu Dhabi</div>
     <ul class="bullets">
       <li>Multi-agent reinforcement learning for teams of underwater vehicles searching the seabed with unreliable sonar and acoustic links.</li>
-      <li>Hybrid control that calls a classical planner only when the learned policy is uncertain. Journal paper in preparation.</li>
+      <li>Hybrid control that calls a classical planner only when the learned policy is uncertain.</li>
     </ul>
   </div>
   <div class="entry">

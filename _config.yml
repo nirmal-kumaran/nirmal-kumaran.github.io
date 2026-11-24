@@ -1,10 +1,11 @@
 title: Nirmal Kumaran
+tagline: Computer Vision Engineer at LAT Aerospace. Robot learning, reinforcement learning and real-time perception.
 description: Robotics and computer vision engineer working on robot learning, reinforcement learning and real-time perception.
 email: nirmalkumaran.contact@gmail.com
 linkedin: https://www.linkedin.com/in/nirmal-kumaran-910128274/
 github: https://github.com/nirmal-kumaran
 # Fill these in; a link stays hidden while its value is empty.
-orcid: ""            # e.g. https://orcid.org/0000-0000-0000-0000
-scholar: ""          # e.g. https://scholar.google.com/citations?user=XXXX
+orcid: https://orcid.org/0009-0007-2624-4555
+scholar: https://scholar.google.com/citations?user=zugyKQcAAAAJ
 x: ""
 exclude: [README.md]
