@@ -1,0 +1,131 @@
+---
+layout: default
+title: Projects
+---
+<h1>Projects</h1>
+<p class="muted" style="margin-top:6px">Research, industry and competition work, newest first.</p>
+
+<section>
+  <h2>Research and industry</h2>
+
+  <article class="card" id="uav-perception">
+    <div class="thumb"><img src="{{ '/assets/img/uav-perception.jpg' | relative_url }}" alt="" onerror="this.remove()">Photo</div>
+    <div>
+      <h3>Real-time EO/IR perception for UAV gimbals</h3>
+      <div class="meta">LAT Aerospace · Aug 2026 – present</div>
+      <p>Detection, tracking and stabilization of electro-optical and thermal video, running live on a Jetson Orin NX on the drone.</p>
+      <ul class="bullets">
+        <li>Multi-object tracker for very small aerial targets (4–30 px) that holds tracks through camera motion and occlusion.</li>
+        <li>Improved a transformer single-object tracker under occlusion, then distilled it to half depth and deployed it in TensorRT FP16.</li>
+        <li>CUDA video stabilizer that removes shake and keeps intended gimbal pans.</li>
+        <li>Moving-target detection from a moving camera, EO–IR registration and target geolocation.</li>
+      </ul>
+      <div class="tags"><span class="tag">Tracking</span><span class="tag">TensorRT</span><span class="tag">CUDA</span><span class="tag">Jetson</span></div>
+    </div>
+  </article>
+
+  <article class="card" id="auv-search">
+    <div class="thumb"><img src="{{ '/assets/img/auv-search.jpg' | relative_url }}" alt="" onerror="this.remove()">Photo</div>
+    <div>
+      <h3>Multi-agent RL for underwater target search</h3>
+      <div class="meta">MEERA Lab, Sorbonne University Abu Dhabi · with Dr. Giulia De Masi · Jun – Jul 2026</div>
+      <p>Five autonomous underwater vehicles search the seabed together, with noisy sonar and acoustic links that drop most messages.</p>
+      <ul class="bullets">
+        <li>GPU-batched multi-agent simulator in VMAS, and a shared MAPPO policy trained with a centralised critic and run decentrally.</li>
+        <li>Vehicles share belief maps when in range, so the team keeps working under heavy packet loss.</li>
+        <li>An entropy trigger hands uncertain decisions to a classical information-gain planner, at a fraction of its compute.</li>
+        <li>Journal paper in preparation.</li>
+      </ul>
+      <div class="tags"><span class="tag">MARL</span><span class="tag">MAPPO</span><span class="tag">VMAS</span><span class="tag">Planning</span></div>
+    </div>
+  </article>
+
+  <article class="card" id="vla-routing">
+    <div class="thumb"><img src="{{ '/assets/img/vla-routing.jpg' | relative_url }}" alt="" onerror="this.remove()">Photo</div>
+    <div>
+      <h3>Vision-Language-Action models for wire harness routing</h3>
+      <div class="meta">Mowito Automations · Dec 2025 – Jan 2026</div>
+      <p>Robot routing of wire harnesses for automotive assembly, a long task with a deformable object.</p>
+      <ul class="bullets">
+        <li>Collected teleoperated demonstrations on a LeRobot SO-101 arm and built language-annotated datasets per sub-task.</li>
+        <li>Compared π0.5 and SmolVLA against an ACT baseline; fine-tuned π0.5 with LoRA and ran it with asynchronous inference.</li>
+        <li>Hierarchical planning that splits routing into short learned motion primitives.</li>
+      </ul>
+      <div class="tags"><span class="tag">VLA</span><span class="tag">Imitation learning</span><span class="tag">LeRobot</span><span class="tag">Isaac Sim</span></div>
+    </div>
+  </article>
+
+  <article class="card" id="ship-marl">
+    <div class="thumb"><img src="{{ '/assets/img/ship-marl.jpg' | relative_url }}" alt="" onerror="this.remove()">Photo</div>
+    <div>
+      <h3>Multi-agent RL for ship collision avoidance</h3>
+      <div class="meta">MAV Lab, IIT Madras · Apr 2024 – May 2026</div>
+      <p>Ships with different dynamics learn to avoid each other in busy waters. 3–8 agents trained with SAC, an attention model that scores collision risk, and agents that learn rule-following (COLREG) behaviour on their own.</p>
+      <div class="tags"><span class="tag">SAC</span><span class="tag">Attention</span><span class="tag">COLREG</span></div>
+    </div>
+  </article>
+
+  <article class="card" id="pursuit-evasion">
+    <div class="thumb"><img src="{{ '/assets/img/pursuit-evasion.jpg' | relative_url }}" alt="" onerror="this.remove()">Photo</div>
+    <div>
+      <h3>Pursuit and evasion for ships</h3>
+      <div class="meta">MAV Lab, IIT Madras · Jul 2025 – May 2026</div>
+      <p>An evader ship plans its escape from several pursuers in a 50-ship-length arena. Built a kinematic ship simulator, inverse-RL planning for the evader, and interception strategies for the pursuers.</p>
+      <div class="tags"><span class="tag">Inverse RL</span><span class="tag">Multi-agent</span></div>
+    </div>
+  </article>
+
+  <article class="card" id="hydrofoil">
+    <div class="thumb"><img src="{{ '/assets/img/hydrofoil.jpg' | relative_url }}" alt="" onerror="this.remove()">Photo</div>
+    <div>
+      <h3>Lift control for a hydrofoil ferry</h3>
+      <div class="meta">Pravahan Engineering · May – Jul 2025</div>
+      <p>Modelled hydrofoil dynamics and closed-loop PID control for vertical lift and cruise stability, and documented the path from simulation to deployment.</p>
+      <div class="tags"><span class="tag">Control</span><span class="tag">Simulink</span></div>
+    </div>
+  </article>
+
+  <article class="card" id="youbot">
+    <div class="thumb"><img src="{{ '/assets/img/youbot.jpg' | relative_url }}" alt="" onerror="this.remove()">Photo</div>
+    <div>
+      <h3>KUKA youBot mobile manipulation</h3>
+      <div class="meta">Course project, ED5215 Motion Planning</div>
+      <p>Pick-and-place planning for a mobile manipulator. Compared coupled and decoupled planning, with RRT* for the arm and A* for the base.</p>
+      <div class="tags"><span class="tag">RRT*</span><span class="tag">A*</span><span class="tag">CoppeliaSim</span></div>
+    </div>
+  </article>
+</section>
+
+<section>
+  <h2>Competitions</h2>
+
+  <article class="card" id="swarm-rescue">
+    <div class="thumb"><img src="{{ '/assets/img/swarm-rescue.jpg' | relative_url }}" alt="" onerror="this.remove()">Photo</div>
+    <div>
+      <h3>Swarm Drone Rescue Challenge</h3>
+      <div class="meta">CIEDS and DRDO · ENSTA Paris, France · 1st and 3rd place</div>
+      <p>Competed twice against 30+ Indian and French teams. Built a PPO controller for waypoint tracking, decentralised probabilistic coordination between drones, multi-goal A* path planning and an EKF for GPS-denied navigation.</p>
+      <div class="tags"><span class="tag">PPO</span><span class="tag">Swarm</span><span class="tag">EKF</span></div>
+    </div>
+  </article>
+
+  <article class="card" id="njord">
+    <div class="thumb"><img src="{{ '/assets/img/njord.jpg' | relative_url }}" alt="" onerror="this.remove()">Photo</div>
+    <div>
+      <h3>Njord Autonomous Ship Challenge</h3>
+      <div class="meta">NTNU, Norway · Team Aritra</div>
+      <p>Designed and built an autonomous surface vessel. PID station-keeping, an occupancy map from YOLOv8 and LiDAR, and centimetre-level localization from IMU and GPS with a Kalman filter.</p>
+      <div class="tags"><span class="tag">ASV</span><span class="tag">Sensor fusion</span><span class="tag">YOLOv8</span></div>
+    </div>
+  </article>
+
+  <article class="card" id="formula-bharat">
+    <div class="thumb"><img src="{{ '/assets/img/formula-bharat.jpg' | relative_url }}" alt="" onerror="this.remove()">Photo</div>
+    <div>
+      <h3>Formula Bharat 2024</h3>
+      <div class="meta">FSAE India · 2nd overall (EV)</div>
+      <p>Second-year EV team among 31+ teams. Won the Engineering Design Challenge, Best Battery Pack Design and the MathWorks Modelling Award. Designed the composite brake pedal and a carbon-fibre A-arm 25% lighter than steel tube.</p>
+      <div class="tags"><span class="tag">Composites</span><span class="tag">Ansys</span></div>
+    </div>
+  </article>
+</section>

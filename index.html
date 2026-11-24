@@ -1,380 +1,142 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Nirmal Kumaran — Autonomous Systems & Robotics</title>
-<meta name="description" content="Nirmal Kumaran — Mechanical Engineering, IIT Madras. Swarm robotics, marine autonomy, multi-agent reinforcement learning.">
+---
+layout: default
+---
+<section class="intro">
+  <div class="photo"><img src="{{ '/assets/img/profile.jpg' | relative_url }}" alt="Nirmal Kumaran" onerror="this.remove()">NK</div>
+  <div>
+    <h1>Nirmal Kumaran</h1>
+    <p class="role">Computer Vision Engineer, LAT Aerospace · B.Tech Mechanical Engineering, IIT Madras</p>
+    <p class="bio">I work on how robots perceive and act. My interests are robot learning, reinforcement learning, Vision-Language-Action models and world models, and making these systems run in real time on real hardware.</p>
+    <p class="bio">At LAT Aerospace I build detection, tracking and video stabilization for UAV gimbal cameras on embedded GPUs. Before this, I worked on multi-agent reinforcement learning for underwater vehicles at Sorbonne University Abu Dhabi, and on Vision-Language-Action models for robot manipulation at Mowito Automations.</p>
+    <div class="links">
+      <a href="mailto:{{ site.email }}">Email</a>
+      <a href="{{ '/cv.pdf' | relative_url }}">CV</a>
+      <a href="{{ site.linkedin }}">LinkedIn</a>
+      <a href="{{ site.github }}">GitHub</a>
+      {% if site.orcid != "" %}<a href="{{ site.orcid }}">ORCID</a>{% endif %}
+      {% if site.scholar != "" %}<a href="{{ site.scholar }}">Google Scholar</a>{% endif %}
+      {% if site.x != "" %}<a href="{{ site.x }}">X</a>{% endif %}
+    </div>
+  </div>
+</section>
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<section>
+  <h2>Research interests</h2>
+  <div class="tags">
+    <span class="tag">Robot learning</span>
+    <span class="tag">Vision-Language-Action models</span>
+    <span class="tag">World models</span>
+    <span class="tag">Multi-agent reinforcement learning</span>
+    <span class="tag">Real-time perception</span>
+    <span class="tag">Marine and aerial autonomy</span>
+  </div>
+</section>
 
-<link rel="stylesheet" href="style.css">
+<section>
+  <h2>News</h2>
+  <ul class="plain news">
+    <li><span class="date">2026</span><span>Preparing a journal paper on multi-agent search with underwater vehicles, with Dr. Giulia De Masi.</span></li>
+    <li><span class="date">Aug 2026</span><span>Joined LAT Aerospace as a Computer Vision Engineer.</span></li>
+    <li><span class="date">Jun 2026</span><span>Started a research internship at the MEERA Lab, Sorbonne University Abu Dhabi.</span></li>
+    <li><span class="date">May 2026</span><span>Presented FUSED-Net at IEEE OCEANS 2026, Sanya. <a href="{{ '/publications/' | relative_url }}">Paper</a></span></li>
+    <li><span class="date">Dec 2025</span><span>Started work on Vision-Language-Action models at Mowito Automations.</span></li>
+  </ul>
+</section>
 
-<script type="importmap">
-{
-  "imports": {
-    "three": "https://unpkg.com/three@0.160.0/build/three.module.js"
-  }
-}
-</script>
-</head>
-<body>
-
-<!-- ============ NAV ============ -->
-<nav id="nav">
-  <div class="nav-inner">
-    <a class="nav-mark" href="#top">
-      <span class="nav-mark-glyph">◈</span>
-      <span class="nav-mark-text">N.KUMARAN</span>
-    </a>
-    <button id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
-      <span></span><span></span><span></span>
-    </button>
-    <ul class="nav-links">
-      <li><a href="#publication"><span class="idx">01</span>Publications</a></li>
-      <li><a href="#experience"><span class="idx">02</span>Experience</a></li>
-      <li><a href="#missions"><span class="idx">03</span>Missions</a></li>
-      <li><a href="#research"><span class="idx">04</span>Research</a></li>
-      <li><a href="#skills"><span class="idx">05</span>Systems</a></li>
-      <li><a href="#contact" class="nav-cta">Contact</a></li>
+<section>
+  <h2>Experience</h2>
+  <div class="entry">
+    <div class="entry-head"><h3>Computer Vision Engineer</h3><span class="when">Aug 2026 – present</span></div>
+    <div class="org">LAT Aerospace</div>
+    <ul class="bullets">
+      <li>Real-time EO/IR detection, tracking and video stabilization for UAV gimbal cameras on Jetson Orin NX.</li>
+      <li>Tracker for very small aerial targets, and a compressed single-object tracker running in TensorRT.</li>
     </ul>
   </div>
-</nav>
-
-<!-- ============ HERO ============ -->
-<header id="top" class="hero">
-  <canvas id="swarm-canvas"></canvas>
-  <div class="hero-vignette"></div>
-
-  <div class="hud-frame" aria-hidden="true">
-    <span class="hud-corner tl"></span>
-    <span class="hud-corner tr"></span>
-    <span class="hud-corner bl"></span>
-    <span class="hud-corner br"></span>
-    <div class="hud-label hud-label-tl">SYS // MULTI-AGENT NAV</div>
-    <div class="hud-label hud-label-tr">POS-EST · KALMAN-FUSED</div>
-    <div class="hud-label hud-label-bl" id="hud-agents">AGENTS: 24 ACTIVE</div>
-    <div class="hud-label hud-label-br" id="hud-clock">--:--:--</div>
+  <div class="entry">
+    <div class="entry-head"><h3>Research Intern, with Dr. Giulia De Masi</h3><span class="when">Jun 2026 – Jul 2026</span></div>
+    <div class="org">MEERA Lab, Sorbonne University Abu Dhabi</div>
+    <ul class="bullets">
+      <li>Multi-agent reinforcement learning for teams of underwater vehicles searching the seabed with unreliable sonar and acoustic links.</li>
+      <li>Hybrid control that calls a classical planner only when the learned policy is uncertain. Journal paper in preparation.</li>
+    </ul>
   </div>
-
-  <div class="hero-content">
-    <p class="eyebrow">B.TECH MECHANICAL ENGINEERING · IIT MADRAS · CLASS OF 2026</p>
-    <h1 class="hero-title">NIRMAL<br>KUMARAN</h1>
-    <p class="hero-sub">Autonomous systems engineer working across <span>swarm robotics</span>, <span>marine autonomy</span>, and <span>multi-agent reinforcement learning</span> — from GPS-denied drone rescue to communication-constrained AUV search.</p>
-    <div class="hero-actions">
-      <a href="#publication" class="btn btn-primary">View Publications <span class="btn-arrow">→</span></a>
-      <a href="mailto:nirmalkumaran.contact@gmail.com" class="btn btn-ghost">Get in touch</a>
-    </div>
+  <div class="entry">
+    <div class="entry-head"><h3>AI Intern</h3><span class="when">Dec 2025 – Jan 2026</span></div>
+    <div class="org">Mowito Automations</div>
+    <ul class="bullets">
+      <li>Vision-Language-Action models (π0.5, SmolVLA) and ACT for wire harness routing on a LeRobot SO-101 arm.</li>
+      <li>Hierarchical planning that splits the long task into short learned motion primitives.</li>
+    </ul>
   </div>
-
-  <div class="scroll-cue" aria-hidden="true">
-    <span>SCROLL</span>
-    <div class="scroll-line"></div>
-  </div>
-</header>
-
-<main>
-
-<!-- ============ STRIP: FOCUS AREAS ============ -->
-<section class="strip" aria-label="Focus areas">
-  <div class="strip-inner">
-    <div class="strip-item">
-      <span class="strip-num">1</span>
-      <span class="strip-label">Publication<br>IEEE OCEANS 2026</span>
-    </div>
-    <div class="strip-item">
-      <span class="strip-num">03</span>
-      <span class="strip-label">Int'l Competitions<br>Podium Finishes</span>
-    </div>
-    <div class="strip-item">
-      <span class="strip-num">8.63</span>
-      <span class="strip-label">CGPA / 10.00<br>IIT Madras</span>
-    </div>
-    <div class="strip-item">
-      <span class="strip-num">3</span>
-      <span class="strip-label">Research Labs<br>Sorbonne · MAV Lab · Mowito</span>
-    </div>
+  <div class="entry">
+    <div class="entry-head"><h3>Software and Controls Intern</h3><span class="when">May 2025 – Jul 2025</span></div>
+    <div class="org">Pravahan Engineering</div>
+    <ul class="bullets">
+      <li>Modelled hydrofoil dynamics and closed-loop PID control for lift and stability of an autonomous ferry.</li>
+    </ul>
   </div>
 </section>
 
-<!-- ============ ABOUT ============ -->
-<section class="about reveal">
-  <div class="section-head">
-    <span class="tag">DWG NO. 00 — BRIEF</span>
-    <h2>Field of operation</h2>
+<section>
+  <h2>Selected projects</h2>
+  <div class="grid2">
+    <a class="feature" href="{{ '/projects/#auv-search' | relative_url }}">
+      <div class="thumb"><img src="{{ '/assets/img/auv-search.jpg' | relative_url }}" alt="" onerror="this.remove()">Multi-AUV search</div>
+      <div class="body"><h3>Multi-agent RL for underwater search</h3><p>Teams of AUVs that divide a seabed search and share what they find over lossy acoustic links.</p></div>
+    </a>
+    <a class="feature" href="{{ '/projects/#vla-routing' | relative_url }}">
+      <div class="thumb"><img src="{{ '/assets/img/vla-routing.jpg' | relative_url }}" alt="" onerror="this.remove()">VLA wire routing</div>
+      <div class="body"><h3>VLA models for wire harness routing</h3><p>Pretrained robot policies and hierarchical planning for a long, deformable manipulation task.</p></div>
+    </a>
+    <a class="feature" href="{{ '/projects/#uav-perception' | relative_url }}">
+      <div class="thumb"><img src="{{ '/assets/img/uav-perception.jpg' | relative_url }}" alt="" onerror="this.remove()">UAV perception</div>
+      <div class="body"><h3>Real-time perception for UAV gimbals</h3><p>Detection, tracking and stabilization of EO/IR video on an embedded GPU.</p></div>
+    </a>
+    <a class="feature" href="{{ '/projects/#swarm-rescue' | relative_url }}">
+      <div class="thumb"><img src="{{ '/assets/img/swarm-rescue.jpg' | relative_url }}" alt="" onerror="this.remove()">Swarm rescue</div>
+      <div class="body"><h3>Swarm Drone Rescue Challenge</h3><p>1st and 3rd place in the DRDO and CIEDS Indo-French challenge at ENSTA Paris.</p></div>
+    </a>
   </div>
-  <p class="about-lede">
-    I build the decision layer for machines that have to navigate uncertainty — underwater, in the air, and on the water. My work sits at the intersection of <strong>control theory</strong> and <strong>multi-agent reinforcement learning</strong>: teaching fleets of autonomous vehicles to search, avoid collisions, and hold formation when sensing and communication can't be trusted.
-  </p>
-  <p class="about-body">
-    Currently I'm a research intern at Sorbonne University's MEERA Lab, modelling belief-fusion strategies for underwater vehicles searching with degraded acoustic sensing. Earlier, I placed 1st and 3rd internationally in DRDO's Swarm Drone Rescue Challenge, took 2nd overall at Formula Bharat as a second-year EV team, and led Team Aritra's autonomous surface vessel programme through NTNU's Njord Challenge.
-  </p>
+  <p class="small" style="margin-top:14px"><a href="{{ '/projects/' | relative_url }}">All projects →</a></p>
 </section>
 
-<!-- ============ PUBLICATION (priority 1) ============ -->
-<section id="publication" class="publication reveal">
-  <div class="section-head">
-    <span class="tag">DWG NO. 01 — PUBLICATION</span>
-    <h2>Published work</h2>
-  </div>
-
-  <article class="pub-card">
-    <div class="pub-visual" aria-hidden="true">
-      <svg viewBox="0 0 200 140" class="pub-svg">
-        <rect x="1" y="1" width="198" height="138" rx="4" class="pub-svg-frame"/>
-        <g class="pub-svg-wave">
-          <path d="M0,70 Q25,40 50,70 T100,70 T150,70 T200,70" />
-          <path d="M0,90 Q25,60 50,90 T100,90 T150,90 T200,90" />
-          <path d="M0,50 Q25,20 50,50 T100,50 T150,50 T200,50" />
-        </g>
-        <circle cx="150" cy="45" r="18" class="pub-svg-ring r1"/>
-        <circle cx="150" cy="45" r="28" class="pub-svg-ring r2"/>
-      </svg>
-    </div>
-    <div class="pub-body">
-      <span class="pub-venue">IEEE OCEANS 2026 · SANYA, CHINA · MAY 25–28</span>
-      <h3>FUSED-Net: Fast Underwater Super-Resolution &amp; Enhancement Distillation Network</h3>
-      <p>A lightweight, real-time super-resolution model distilled from a high-fidelity GAN teacher — built to run enhancement on underwater imagery without the usual inference cost. Presented at the IEEE Oceanic Engineering Society's flagship marine-technology conference.</p>
-      <ul class="pub-points">
-        <li>U-Net image enhancement to remove hue and occlusion, raising UIQM score</li>
-        <li>Super-resolution GAN generating 4× upscaled, high-frequency detail from low-res input</li>
-        <li>Knowledge distillation into a lightweight autoencoder student</li>
-        <li><strong>Result:</strong> inference cut from 400ms to 30ms, model size reduced 50× with reconstruction accuracy maintained</li>
-      </ul>
-    </div>
-  </article>
-</section>
-
-<!-- ============ EXPERIENCE (priority 2) ============ -->
-<section id="experience" class="experience reveal">
-  <div class="section-head">
-    <span class="tag">DWG NO. 02 — EXPERIENCE</span>
-    <h2>Trajectory</h2>
-  </div>
-
-  <div class="timeline">
-
-    <article class="tl-item">
-      <div class="tl-marker"><span class="tl-dot"></span><span class="tl-line"></span></div>
-      <div class="tl-content">
-        <div class="tl-meta">
-          <span class="tl-date">JUN 2026 — PRESENT</span>
-          <span class="tl-status status-active">ACTIVE</span>
-        </div>
-        <h3>Research Intern</h3>
-        <p class="tl-org">Dr. Giulia De Masi, MEERA Lab · Sorbonne University</p>
-        <p class="tl-desc">Multi-agent reinforcement learning for AUV target search under sensing &amp; communication constraints.</p>
-        <ul class="tl-points">
-          <li>Built a custom VMAS multi-agent environment with discrete grid navigation and per-agent private belief maps</li>
-          <li>Modelled spatially varying sensor confusion matrices to simulate real-world acoustic degradation</li>
-          <li>Implemented log-odds Bayesian belief fusion gated by inter-agent communication range</li>
-          <li>Trained MAPPO with centralized critic &amp; parameter sharing; benchmarked against a Voronoi-based greedy baseline</li>
-        </ul>
-      </div>
-    </article>
-
-    <article class="tl-item">
-      <div class="tl-marker"><span class="tl-dot"></span><span class="tl-line"></span></div>
-      <div class="tl-content">
-        <div class="tl-meta">
-          <span class="tl-date">DEC 2025 — JAN 2026</span>
-        </div>
-        <h3>AI Intern</h3>
-        <p class="tl-org">Mowito Automations</p>
-        <p class="tl-desc">Vision-Language-Action models for wire harness routing in automotive manufacturing.</p>
-        <ul class="tl-points">
-          <li>Tested foundational VLA models (PI05, SmolVLA) on a LeRobot SO-101 manipulator</li>
-          <li>Designed hierarchical planning, splitting long-horizon tasks into small motion primitives</li>
-        </ul>
-      </div>
-    </article>
-
-    <article class="tl-item">
-      <div class="tl-marker"><span class="tl-dot"></span><span class="tl-line"></span></div>
-      <div class="tl-content">
-        <div class="tl-meta">
-          <span class="tl-date">MAY 2025 — JUL 2025</span>
-        </div>
-        <h3>Software &amp; Controls Intern</h3>
-        <p class="tl-org">Pravahan Engineering</p>
-        <p class="tl-desc">Closed-loop controller simulation for active lift on a hydrofoil boat, reducing water resistance.</p>
-        <ul class="tl-points">
-          <li>Researched hardware &amp; software requirements for autonomous hydrofoil-equipped ferry control</li>
-          <li>Modelled hydrofoil dynamics for vertical lift and cruise-mode stability using closed-loop PID control</li>
-          <li>Documented simulation-to-deployment workflows and control algorithms</li>
-        </ul>
-      </div>
-    </article>
-
+<section>
+  <h2>Education</h2>
+  <div class="entry">
+    <div class="entry-head"><h3>B.Tech, Mechanical Engineering</h3><span class="when">2022 – 2026</span></div>
+    <div class="org">Indian Institute of Technology Madras · CGPA 8.63 / 10</div>
   </div>
 </section>
 
-<!-- ============ MISSIONS / COMPETITIONS ============ -->
-<section id="missions" class="missions reveal">
-  <div class="section-head">
-    <span class="tag">DWG NO. 03 — COMPETITIONS</span>
-    <h2>Mission log</h2>
-  </div>
+<section>
+  <h2>Honours</h2>
+  <ul class="bullets">
+    <li>Award from DRDO and CIEDS for the top position in the Indo-French Swarm Rescue Challenge.</li>
+    <li>Supported by the Royal Norwegian Embassy for work in the Njord Autonomous Ship Challenge.</li>
+    <li>Formula Bharat 2024: 2nd overall (EV), Engineering Design Challenge winner, Best Battery Pack Design, MathWorks Modelling Award.</li>
+    <li>BuildSchool 4.0 Ideathon, IIT Madras: 1st place.</li>
+  </ul>
+</section>
 
-  <div class="mission-grid">
-
-    <article class="mission-card">
-      <div class="mission-card-top">
-        <span class="mission-result">1ST &amp; 3RD</span>
-        <span class="mission-place">ENSTA Paris, France</span>
-      </div>
-      <h3>Swarm Drone Rescue Challenge</h3>
-      <p class="mission-org">CIEDS &amp; DRDO — vs. 30+ Indian &amp; French teams</p>
-      <p class="mission-desc">Competed twice, placing 1st and 3rd. Designed a PPO DRL controller for waypoint tracking and a decentralised probabilistic coordination strategy for multi-goal pursuit under constraints.</p>
-      <ul class="mission-points">
-        <li>Multi-Goal A* for optimal pathing across probabilistic targets</li>
-        <li>Extended Kalman Filter for GPS-denied navigation</li>
-      </ul>
-    </article>
-
-    <article class="mission-card">
-      <div class="mission-card-top">
-        <span class="mission-result">TEAM LEAD</span>
-        <span class="mission-place">NTNU, Norway</span>
-      </div>
-      <h3>Njord — Autonomous Ship Challenge</h3>
-      <p class="mission-org">Team Aritra — international ASV competition</p>
-      <p class="mission-desc">Designed and built an ASV for station-keeping and dynamic-weather navigation, supported by the Royal Norwegian Embassy.</p>
-      <ul class="mission-points">
-        <li>PID-tuned station-keeping for a holonomic vessel</li>
-        <li>YOLOv8 + LiDAR fusion for 2D occupancy mapping</li>
-        <li>Centimeter-level localization via IMU + GPS Kalman fusion</li>
-      </ul>
-    </article>
-
-    <article class="mission-card">
-      <div class="mission-card-top">
-        <span class="mission-result">2ND OVERALL (EV)</span>
-        <span class="mission-place">India</span>
-      </div>
-      <h3>Formula Bharat 2024</h3>
-      <p class="mission-org">FSAE — 2nd-year EV team among 31+ teams</p>
-      <p class="mission-desc">Won the Engineering Design Challenge, Best Battery Pack Design, and the Mathworks Modelling Award, at India's largest student formula competition.</p>
-      <ul class="mission-points">
-        <li>2000 N brake pedal load capacity via Ansys ACP iteration</li>
-        <li>Carbon-fibre A-arm: 4000 N loads at 25% less weight than steel</li>
-      </ul>
-    </article>
-
+<section>
+  <h2>Leadership</h2>
+  <div class="entry">
+    <div class="entry-head"><h3>Team Head, Team Aritra</h3><span class="when">Jan 2024 – Jul 2026</span></div>
+    <div class="org">Autonomous surface vessel team, IIT Madras</div>
+    <ul class="bullets">
+      <li>Led the team in international competitions: Njord, VRX and RoboBoat.</li>
+      <li>Kept the partnership with the Royal Norwegian Embassy, New Delhi, our main sponsor.</li>
+    </ul>
   </div>
 </section>
 
-<!-- ============ RESEARCH PROJECTS ============ -->
-<section id="research" class="research reveal">
-  <div class="section-head">
-    <span class="tag">DWG NO. 04 — RESEARCH</span>
-    <h2>Ongoing lines of work</h2>
-  </div>
-
-  <div class="research-list">
-
-    <article class="research-row">
-      <div class="research-row-label">
-        <span class="research-tag">MAV LAB</span>
-        <span class="research-date">APR 2024 — PRESENT</span>
-      </div>
-      <div class="research-row-body">
-        <h3>Multi-Agent RL for Collision Avoidance</h3>
-        <p>Multi-agent reinforcement learning for heterogeneous ship-collision avoidance in busy waterways. Simulated 3–8 agents with SAC-DRL, and an attention-based framework to compute a Collision Risk Factor across multi-ship encounters — training agents to self-discover COLREG-compliant behaviour.</p>
-      </div>
-    </article>
-
-    <article class="research-row">
-      <div class="research-row-label">
-        <span class="research-tag">MAV LAB</span>
-        <span class="research-date">MAY 2024 — PRESENT</span>
-      </div>
-      <div class="research-row-body">
-        <h3>Pursuit Evasion</h3>
-        <p>RL planning for an evader ship under pursuit in a 50-ship-length arena. Built a kinematic-ship simulation framework and inverse-RL evasion planning, alongside interception strategies for pursuer vessels.</p>
-      </div>
-    </article>
-
-    <article class="research-row">
-      <div class="research-row-label">
-        <span class="research-tag">ED5215</span>
-        <span class="research-date">COURSE PROJECT</span>
-      </div>
-      <div class="research-row-body">
-        <h3>Kuka YouBot Mobile Manipulation</h3>
-        <p>Planning algorithms for pick-and-place in simulated mobile manipulation. Benchmarked coupled vs. decoupled motion planning, implementing hybrid RRT* (manipulator) + A* (base) planning in the decoupled framework.</p>
-      </div>
-    </article>
-
-  </div>
+<section>
+  <h2>Skills</h2>
+  <dl class="skills">
+    <dt>Languages</dt><dd>Python, C++, CUDA, MATLAB</dd>
+    <dt>Machine learning</dt><dd>PyTorch, TensorRT, LeRobot, Stable Baselines, Ray, scikit-learn</dd>
+    <dt>Robotics</dt><dd>ROS, Gazebo, Isaac Sim, VMAS, CoppeliaSim</dd>
+    <dt>Design and simulation</dt><dd>SolidWorks, Fusion 360, Creo, Ansys, Simulink</dd>
+  </dl>
 </section>
-
-<!-- ============ SKILLS ============ -->
-<section id="skills" class="skills reveal">
-  <div class="section-head">
-    <span class="tag">DWG NO. 05 — SYSTEMS</span>
-    <h2>Instrumentation</h2>
-  </div>
-
-  <div class="skills-grid">
-    <div class="skill-block">
-      <h4>Languages</h4>
-      <div class="chip-row">
-        <span class="chip">Python</span><span class="chip">C++</span><span class="chip">MATLAB</span>
-      </div>
-    </div>
-    <div class="skill-block">
-      <h4>Libraries &amp; Frameworks</h4>
-      <div class="chip-row">
-        <span class="chip">NumPy</span><span class="chip">PyTorch</span><span class="chip">Scikit-learn</span><span class="chip">ROS</span><span class="chip">Ray</span><span class="chip">Stable Baselines</span>
-      </div>
-    </div>
-    <div class="skill-block">
-      <h4>CAD</h4>
-      <div class="chip-row">
-        <span class="chip">Fusion 360</span><span class="chip">Autodesk Inventor</span><span class="chip">SolidWorks</span><span class="chip">Creo</span>
-      </div>
-    </div>
-    <div class="skill-block">
-      <h4>Simulation</h4>
-      <div class="chip-row">
-        <span class="chip">Ansys</span><span class="chip">Gazebo</span><span class="chip">V-REP</span><span class="chip">Simulink</span>
-      </div>
-    </div>
-  </div>
-
-  <div class="edu-block">
-    <h4>Education</h4>
-    <div class="edu-row">
-      <span class="edu-year">2022 — 2026</span>
-      <span class="edu-what">B.Tech Mechanical Engineering, Indian Institute of Technology Madras</span>
-      <span class="edu-score">CGPA 8.63/10.00</span>
-    </div>
-  </div>
-</section>
-
-</main>
-
-<!-- ============ FOOTER / CONTACT ============ -->
-<footer id="contact" class="footer">
-  <div class="footer-inner">
-    <div class="footer-main">
-      <h2>Let's build something<br>that navigates well.</h2>
-      <a href="mailto:nirmalkumaran.contact@gmail.com" class="footer-email">nirmalkumaran.contact@gmail.com</a>
-    </div>
-    <div class="footer-links">
-      <a href="https://www.linkedin.com/in/nirmal-kumaran-910128274/" target="_blank" rel="noopener">LinkedIn ↗</a>
-      <a href="mailto:nirmalkumaran.contact@gmail.com">Email ↗</a>
-    </div>
-  </div>
-  <div class="footer-bottom">
-    <span>© 2026 NIRMAL KUMARAN</span>
-    <span>IIT MADRAS · MECHANICAL ENGINEERING</span>
-  </div>
-</footer>
-
-<script type="module" src="script.js"></script>
-</body>
-</html>
