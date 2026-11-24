@@ -26,6 +26,7 @@
     <a class="brand" href="{{ '/' | relative_url }}">{{ site.title }}</a>
     <nav class="site" aria-label="Main">
       <a href="{{ '/' | relative_url }}" {% if page.url == '/' %}aria-current="page"{% endif %}>About</a>
+      <a href="{{ '/experience/' | relative_url }}" {% if page.url == '/experience/' %}aria-current="page"{% endif %}>Experience</a>
       <a href="{{ '/projects/' | relative_url }}" {% if page.url == '/projects/' %}aria-current="page"{% endif %}>Projects</a>
       <a href="{{ '/publications/' | relative_url }}" {% if page.url == '/publications/' %}aria-current="page"{% endif %}>Publications</a>
       <a href="{{ '/cv.pdf' | relative_url }}">CV</a>
@@ -65,7 +66,7 @@
 <script>
   document.getElementById('theme').addEventListener('click', function () {
     var root = document.documentElement;
-    var dark = root.dataset.theme ? root.dataset.theme === 'dark' : matchMedia('(prefers-color-scheme: dark)').matches;
+    var dark = root.dataset.theme === 'dark';
     root.dataset.theme = dark ? 'light' : 'dark';
     try { localStorage.setItem('theme', root.dataset.theme); } catch (e) {}
   });
