@@ -3,88 +3,62 @@ layout: default
 title: Experience
 ---
 <h1>Experience</h1>
+<p class="lede-text">The thread through my work is getting learned systems to behave well on real machines: on the water, under it, in the air and on a robot arm. I like problems where the model is only half the answer and the other half is making it hold up under noise, delay and limited hardware.</p>
 
 <section>
   <h2>Work and research</h2>
+
   <div class="entry">
-    <div class="entry-head"><h3>Computer Vision Engineer</h3><span class="when">Aug 2026 – present</span></div>
-    <div class="org">LAT Aerospace</div>
-    <ul class="bullets">
-      <li>Real-time EO/IR detection, tracking and video stabilization for UAV gimbal cameras on Jetson Orin NX.</li>
-      <li>Tracker for very small aerial targets, and a compressed single-object tracker running in TensorRT.</li>
-    </ul>
+    <div class="entry-head"><h3>LAT Aerospace</h3><span class="when">Aug 2026 – present</span></div>
+    <div class="org">Computer Vision Engineer</div>
+    <p>I build the eyes of a drone's gimbal camera: detecting and tracking targets in visible and thermal video, and keeping the picture steady, all live on a small embedded GPU. Most of the work is about what happens when a good model meets a moving camera and a tight compute budget. I made a large transformer tracker half as deep and several times faster without losing accuracy, and learned that on embedded hardware, memory and data movement matter as much as the network itself.</p>
   </div>
+
   <div class="entry">
-    <div class="entry-head"><h3>Research Intern, with Dr. Giulia De Masi</h3><span class="when">Jun 2026 – Jul 2026</span></div>
-    <div class="org">MEERA Lab, Sorbonne University Abu Dhabi</div>
-    <ul class="bullets">
-      <li>Multi-agent reinforcement learning for teams of underwater vehicles searching the seabed with unreliable sonar and acoustic links.</li>
-      <li>Hybrid control that calls a classical planner only when the learned policy is uncertain.</li>
-    </ul>
+    <div class="entry-head"><h3>MEERA Lab, Sorbonne University Abu Dhabi</h3><span class="when">Jun – Jul 2026</span></div>
+    <div class="org">Research Intern, with Dr. Giulia De Masi</div>
+    <p>I studied how a team of underwater vehicles can search the seabed together when their sonar is unreliable and their acoustic links drop most messages. I trained the team with multi-agent reinforcement learning so the vehicles divide the area on their own and share what they find when they come within range. The idea I'm proudest of is letting the learned policy notice its own uncertainty and ask a classical planner for help only then, which keeps the planner's quality at a fraction of its cost.</p>
   </div>
+
   <div class="entry">
-    <div class="entry-head"><h3>AI Intern</h3><span class="when">Dec 2025 – Jan 2026</span></div>
-    <div class="org">Mowito Automations</div>
-    <ul class="bullets">
-      <li>Vision-Language-Action models (π0.5, SmolVLA) and ACT for wire harness routing on a LeRobot SO-101 arm.</li>
-      <li>Hierarchical planning that splits the long task into short learned motion primitives.</li>
-    </ul>
+    <div class="entry-head"><h3>Mowito Automations</h3><span class="when">Dec 2025 – Jan 2026</span></div>
+    <div class="org">AI Intern</div>
+    <p>I worked on teaching a robot arm to route wire harnesses for car assembly, a long task with a floppy, unpredictable object. I collected demonstrations, adapted Vision-Language-Action models (π0.5 and SmolVLA) and compared them with ACT. Seeing where these large pretrained models succeed and where they lose the thread led me to split the task into short learned skills under a simple planner, and it is what drew me towards world models.</p>
   </div>
+
   <div class="entry">
-    <div class="entry-head"><h3>Software and Controls Intern</h3><span class="when">May 2025 – Jul 2025</span></div>
-    <div class="org">Pravahan Engineering</div>
-    <ul class="bullets">
-      <li>Modelled hydrofoil dynamics and closed-loop PID control for lift and stability of an autonomous ferry.</li>
-    </ul>
+    <div class="entry-head"><h3>MAV Lab, IIT Madras</h3><span class="when">Apr 2024 – May 2026</span></div>
+    <div class="org">Undergraduate researcher, with Dr. Abhilash Somayajula</div>
+    <p>My first research home. I used multi-agent reinforcement learning to teach ships with different dynamics to avoid each other in busy waters, and found that the agents could discover rule-following behaviour on their own. I also worked on pursuit and evasion, where an evading ship learns to escape several pursuers. It is where I learned to build my own simulators and to be careful about what a reward actually teaches.</p>
   </div>
+
+  <div class="entry">
+    <div class="entry-head"><h3>Pravahan Engineering</h3><span class="when">May – Jul 2025</span></div>
+    <div class="org">Software and Controls Intern</div>
+    <p>I modelled the dynamics of a hydrofoil ferry and designed the closed-loop control that keeps it lifted and stable at cruise, a reminder that good classical control is still the foundation under everything learned.</p>
+  </div>
+</section>
+
+<section>
+  <h2>Leading Team Aritra</h2>
+  <p>From 2024 to 2026 I led Team Aritra, IIT Madras's autonomous surface vessel team, through international competitions including Njord in Norway, VRX and RoboBoat. Beyond the boat itself, I kept our partnership with the Royal Norwegian Embassy going and enjoyed showing school students what marine robotics can do.</p>
+</section>
+
+<section>
+  <h2>Recognition</h2>
+  <ul class="bullets">
+    <li>1st and 3rd place in the Indo-French Swarm Drone Rescue Challenge, with an award from DRDO and CIEDS.</li>
+    <li>Supported by the Royal Norwegian Embassy for our work in the Njord Autonomous Ship Challenge.</li>
+    <li>Formula Bharat 2024: 2nd overall (EV) as a second-year team, and winner of the Engineering Design Challenge, Best Battery Pack Design and the MathWorks Modelling Award.</li>
+  </ul>
 </section>
 
 <section>
   <h2>Education</h2>
-  <div class="entry">
-    <div class="entry-head"><h3>B.Tech, Mechanical Engineering</h3><span class="when">2022 – 2026</span></div>
-    <div class="org">Indian Institute of Technology Madras · CGPA 8.63 / 10</div>
-  </div>
+  <p>B.Tech in Mechanical Engineering, Indian Institute of Technology Madras, 2022 – 2026.</p>
 </section>
 
 <section>
-  <h2>Leadership</h2>
-  <div class="entry">
-    <div class="entry-head"><h3>Team Head, Team Aritra</h3><span class="when">Jan 2024 – Jul 2026</span></div>
-    <div class="org">Autonomous surface vessel team, IIT Madras</div>
-    <ul class="bullets">
-      <li>Led the team in international competitions: Njord, VRX and RoboBoat.</li>
-      <li>Kept the partnership with the Royal Norwegian Embassy, New Delhi, our main sponsor.</li>
-    </ul>
-  </div>
-</section>
-
-<section>
-  <h2>Honours</h2>
-  <ul class="bullets">
-    <li>Award from DRDO and CIEDS for the top position in the Indo-French Swarm Rescue Challenge.</li>
-    <li>Supported by the Royal Norwegian Embassy for work in the Njord Autonomous Ship Challenge.</li>
-    <li>Formula Bharat 2024: 2nd overall (EV), Engineering Design Challenge winner, Best Battery Pack Design, MathWorks Modelling Award.</li>
-    <li>BuildSchool 4.0 Ideathon, IIT Madras: 1st place.</li>
-  </ul>
-</section>
-
-<section>
-  <h2>Skills</h2>
-  <dl class="skills">
-    <dt>Languages</dt><dd>Python, C++, CUDA, MATLAB</dd>
-    <dt>Machine learning</dt><dd>PyTorch, TensorRT, LeRobot, Stable Baselines, Ray, scikit-learn</dd>
-    <dt>Robotics</dt><dd>ROS, Gazebo, Isaac Sim, VMAS, CoppeliaSim</dd>
-    <dt>Design and simulation</dt><dd>SolidWorks, Fusion 360, Creo, Ansys, Simulink</dd>
-  </dl>
-</section>
-
-<section>
-  <h2>Timeline</h2>
-  <ul class="plain news">
-    <li><span class="date">Aug 2026</span><span>Joined LAT Aerospace as a Computer Vision Engineer.</span></li>
-    <li><span class="date">Jun 2026</span><span>Started a research internship at the MEERA Lab, Sorbonne University Abu Dhabi.</span></li>
-    <li><span class="date">May 2026</span><span>Presented FUSED-Net at IEEE OCEANS 2026, Sanya. <a href="{{ '/publications/' | relative_url }}">Paper</a></span></li>
-    <li><span class="date">Dec 2025</span><span>Started work on Vision-Language-Action models at Mowito Automations.</span></li>
-  </ul>
+  <h2>Tools I work with</h2>
+  <p>Python, C++ and CUDA; PyTorch, TensorRT and LeRobot for learning and deployment; ROS, Isaac Sim, Gazebo and VMAS for robots and simulation; and SolidWorks, Ansys and Simulink from my mechanical side.</p>
 </section>

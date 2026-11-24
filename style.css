@@ -114,3 +114,8 @@ footer.site { border-top: 1px solid var(--line); padding: 20px 0; color: var(--f
   dl.skills dd { margin-bottom: 8px; }
   h1 { font-size: 26px; }
 }
+
+/* Narrative entries on the Experience page */
+.lede-text { color: var(--muted); margin-top: 10px; font-size: 16.5px; }
+.entry p { margin-top: 8px; }
+.entry .org { font-size: 15px; }
